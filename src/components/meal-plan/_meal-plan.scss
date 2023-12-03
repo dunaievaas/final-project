@@ -1,0 +1,75 @@
+.meal-plan {
+    padding-bottom: 3.5rem;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+
+    .controls {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    input {
+        text-align: center;
+        padding: 0.5rem;
+        margin-bottom: 1rem;
+    }
+
+    .nutrients {
+        ul {
+            display: flex;
+            justify-content: center;
+            list-style-type: none;
+            gap: 2.5rem;
+        }
+
+        h2 {
+            text-align: center;
+            padding: 1.5rem 0;
+        }
+    }
+
+    .meals {
+        display: flex;
+        justify-content: center;
+
+
+        img {
+            width: 100%;
+            margin-bottom: 1rem;
+        }
+
+        .meal-card {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-around;
+            padding: 2rem;
+            margin: 0 1rem;
+            max-width: 18rem;
+            box-shadow: 0 4px 8px 2px rgba(77, 77, 77, 0.15);
+
+            h3 {
+                overflow: hidden;
+                text-overflow: ellipsis;
+                white-space: initial;
+                display: -webkit-box;
+                -webkit-line-clamp: 2;
+                -webkit-box-orient: vertical;
+            }
+
+            &__instruction {
+                font-size: 0.9rem;
+                margin-bottom: 1rem;
+            }
+
+            &__button {
+                text-decoration: none;
+                width: fit-content;
+
+
+            }
+        }
+
+    }
+}

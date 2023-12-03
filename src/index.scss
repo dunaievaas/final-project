@@ -1,0 +1,48 @@
+@use 'sass:math';
+@import '../src/css/variables';
+@import '../src/css/mixins';
+@import '../src/css/extend';
+@import '../src/css/reset';
+@import '../src/css/global';
+@import '../src/components/card/card';
+@import '../src/components/meal-plan/meal-plan';
+@import '../src/pages/recepies-info/recepie';
+@import '../src/pages/searched-recepie/searched';
+@import '../src/components/hero-slider/hero-block';
+
+
+
+
+
+// body {
+//   margin: 0;
+//   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+//     'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+//     sans-serif;
+//   -webkit-font-smoothing: antialiased;
+//   -moz-osx-font-smoothing: grayscale;
+//  
+// }
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+
+
+
+
+
+
+
+/* .pagination {
+  display: flex;
+  justify-content: center;
+  list-style-type: none;
+  gap: 0.8rem;
+  padding: 3rem 0;
+}
+
+.pagination li.selected a {
+  color: red;
+} */
