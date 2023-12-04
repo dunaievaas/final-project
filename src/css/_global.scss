@@ -89,6 +89,15 @@ a {
             background: linear-gradient(0deg, rgba(0, 136, 0, 1) 2%, rgba(240, 245, 0, 1) 100%);
             color: #fff;
         }
+
+        &:not(.disabled) {
+            a {
+                &:hover {
+                    background: linear-gradient(0deg, rgba(0, 136, 0, 1) 2%, rgba(240, 245, 0, 1) 100%);
+                    color: #fff;
+                }
+            }
+        }
     }
 
     a {
@@ -98,20 +107,13 @@ a {
         border-radius: 0.2em;
         text-decoration: none;
         border: 1px solid #008800;
-
-        &:hover {
-            background: linear-gradient(0deg, rgba(0, 136, 0, 1) 2%, rgba(240, 245, 0, 1) 100%);
-            color: #fff;
-        }
     }
 
     .disabled {
         a {
             cursor: no-drop;
             opacity: 0.5;
-
         }
-
     }
 }
 
