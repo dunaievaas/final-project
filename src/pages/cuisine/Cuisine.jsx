@@ -4,6 +4,7 @@ import ReactPaginate from 'react-paginate';
 import usePagination from '../../hooks/usePagination';
 import Card from '../../components/card/Card';
 import Grid from '../../components/grid/Grid.styled';
+import scrollTop from '../../utilits/scrollTop';
 
 function Cuisine() {
     const [cuisine, setCuisine] = useState([]);
@@ -20,6 +21,8 @@ function Cuisine() {
         getCusine(params.type);
         setItemOffset(0);
         setCurrentPage(0);
+        scrollTop();
+
     }, [params.type, setItemOffset, setCurrentPage])
 
     return (

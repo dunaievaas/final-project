@@ -2,6 +2,7 @@ import React, { useEffect, useState, useRef } from 'react';
 import styled from 'styled-components';
 import { useParams } from 'react-router-dom';
 import SimilarRecepies from '../../components/similar-recepies/SimilarRecepies';
+import scrollTop from '../../utilits/scrollTop';
 
 function Recepies() {
     const ref = useRef(null);
@@ -20,12 +21,8 @@ function Recepies() {
         fetchDetails();
     }, [params.id]);
 
-    const scrollToElement = () => {
-        ref.current?.scrollIntoView({ behavior: 'smooth' });
-    };
-
     useEffect(() => {
-        scrollToElement();
+        scrollTop();
     }, [details]);
 
     return (
