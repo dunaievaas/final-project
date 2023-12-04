@@ -1,13 +1,21 @@
 .hero-block {
-    height: 100vh;
+    height: calc(100vh - 120px);
     position: relative;
+
+    @include media (sm) {
+        height: calc(100vh - 64px);
+    }
 
     img {
         width: 100%;
         object-position: center;
         object-fit: cover;
-        height: 100vh;
+        height: calc(100vh - 120px);
         position: relative;
+
+        @include media (sm) {
+            height: calc(100vh - 64px);
+        }
     }
 
     .splide__slide::after {
@@ -20,8 +28,6 @@
         bottom: 0;
         z-index: 2;
         background: linear-gradient(0deg, rgba(0, 136, 0, 0.49352240896358546) 2%, rgba(240, 245, 0, 0.4234943977591037) 100%);
-
-
     }
 
     &__title {
@@ -32,6 +38,5 @@
         z-index: 5;
         width: 100%;
         text-align: center;
-
     }
 }

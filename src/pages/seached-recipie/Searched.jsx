@@ -4,6 +4,7 @@ import ReactPaginate from 'react-paginate';
 import Grid from '../../components/grid/Grid.styled';
 import Card from '../../components/card/Card';
 import usePagination from '../../hooks/usePagination';
+import styled from 'styled-components';
 
 function Searched() {
     const [searchedRecepies, setSearchedRecepies] = useState([]);
@@ -23,7 +24,7 @@ function Searched() {
     }, [params.search, setItemOffset, setCurrentPage]);
 
     return currentItems.length ? (
-        <>
+        <div className='container'>
             <Grid>
                 {currentItems.map((item) => (
                     <Card key={item.id} item={item} />
@@ -33,8 +34,8 @@ function Searched() {
                 <ReactPaginate
                     className="pagination"
                     breakLabel="..."
-                    nextLabel="next >"
-                    previousLabel="< previous"
+                    nextLabel=">"
+                    previousLabel="<"
                     onPageChange={handlePageClick}
                     pageCount={pageCount}
                     forcePage={currentPage}
@@ -44,10 +45,14 @@ function Searched() {
             ) : (
                 false
             )}
-        </>
+        </div>
     ) : (
-        <p>Nothing found by your search.</p>
+        <ErrorText>Nothing found by your search.</ErrorText>
     )
 };
+
+const ErrorText = styled.p`
+    text-align: center;
+`
 
 export default Searched;

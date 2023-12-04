@@ -28,10 +28,7 @@ function Popular() {
             localStorage.setItem('popular', JSON.stringify(data.recipes));
 
             setPopular(data.recipes);
-            console.log(data.recipes);
-
         }
-
     };
 
     return (
@@ -42,6 +39,15 @@ function Popular() {
                     perPage: 4,
                     gap: 30,
                     arrows: false,
+                    breakpoints:
+                    {
+                        992: {
+                            perPage: 2,
+                        },
+                        768: {
+                            perPage: 1,
+                        },
+                    }
                 }}>
                     {popular.map((recipe) => {
 
@@ -65,6 +71,10 @@ function Popular() {
 
 const Wrapper = styled.div`
 margin: 4rem 0rem;
+
+@media only screen and (max-width: 768px) {
+    margin: 1.5rem 0rem;
+}
 
 p {
     font-size: 15px;

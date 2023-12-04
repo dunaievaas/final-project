@@ -3,7 +3,11 @@ import WishList from '../components/wishlist/WishList'
 
 function WishListPage() {
     return (
-        <WishList />
+        <section className='wishlist-section'>
+            <div className='container'>
+                <WishList />
+            </div>
+        </section>
     )
 }
 

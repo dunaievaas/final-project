@@ -3,7 +3,6 @@ import { React, useState, useEffect } from "react";
 function WishListCounter() {
     const [wishListCount, setWishListCount] = useState(() => {
         const wishList = JSON.parse(localStorage.getItem('wishlist') || '[]');
-        //значення за замовчуванням куди приходу функція яка дістає рецепти
 
         return wishList.length;
     })
@@ -16,7 +15,6 @@ function WishListCounter() {
 
         return () => {
             clearInterval(countInterval)
-            //коли компонент знищується потрібно видалити setInterval
         }
     }, [])
 

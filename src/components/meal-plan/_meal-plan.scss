@@ -22,6 +22,12 @@
             justify-content: center;
             list-style-type: none;
             gap: 2.5rem;
+
+            @include media(sm) {
+                flex-direction: column;
+                align-items: center;
+
+            }
         }
 
         h2 {
@@ -33,6 +39,12 @@
     .meals {
         display: flex;
         justify-content: center;
+
+        @include media(sm) {
+            flex-direction: column;
+            align-items: center;
+            gap: 1rem
+        }
 
 
         img {
@@ -66,10 +78,7 @@
             &__button {
                 text-decoration: none;
                 width: fit-content;
-
-
             }
         }
-
     }
 }

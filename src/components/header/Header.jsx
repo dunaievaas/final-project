@@ -1,12 +1,12 @@
 import React, { useState } from 'react'
 import { Link } from "react-router-dom";
-import styled from 'styled-components';
 import { GiKnifeFork } from "react-icons/gi";
 import { IoIosHeartEmpty } from "react-icons/io";
 import WishListCounter from "../wishlist/WishListCounter";
 import SearchAutoComplete from "../search-bar/SearchAutoComplete";
 import { IoSearchSharp } from "react-icons/io5";
 import { IoClose } from "react-icons/io5";
+import Nav from './Nav.styled';
 
 export default function Header() {
     const [activeSearch, setActiveSearch] = useState(false);
@@ -36,22 +36,3 @@ export default function Header() {
         </header>
     )
 }
-
-const Nav = styled.nav` 
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  gap: 1rem 3rem;
-
-  @media only screen and (max-width: 768px) {
-    flex-wrap: wrap;
-
-    .MuiAutocomplete-root {
-      order: 3;
-    }
-  }
-
-  svg {
-    font-size: 1.5rem;
-  }
-`;

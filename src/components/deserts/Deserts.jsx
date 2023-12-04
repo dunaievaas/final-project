@@ -5,37 +5,40 @@ import '@splidejs/react-splide/css';
 import { Link } from "react-router-dom";
 import Card from '../card/Card';
 
-function Veggie() {
+function Deserts() {
 
-    const [veggie, setVeggie] = useState([]);
+    const [deserts, setDeserts] = useState([]);
 
 
     useEffect(() => {
-        getVeggie();
+        getDeserts();
     }, [])
 
-    const getVeggie = async () => {
+    const getDeserts = async () => {
 
-        const check = localStorage.getItem('veggie');
+        const check = localStorage.getItem('deserts');
 
         if (check) {
-            setVeggie(JSON.parse(check))
+            setDeserts(JSON.parse(check))
 
         } else {
-            const api = await fetch(`https://api.spoonacular.com/recipes/random?apiKey=${process.env.REACT_APP_API_KEY}&number=12&vegetarian`);
+            const api = await fetch(`https://api.spoonacular.com/recipes/random?apiKey=${process.env.REACT_APP_API_KEY}&number=12&desserts`);
             const data = await api.json();
 
-            localStorage.setItem('veggie', JSON.stringify(data.recipes));
+            localStorage.setItem('deserts', JSON.stringify(data.recipes));
 
-            setVeggie(data.recipes);
+            setDeserts(data.recipes);
+            console.log(data.recipes);
+
         }
+
     };
     return (
         <div>
             <Wrapper>
-                <h2>Veggie Picks</h2>
+                <h2>Desserts</h2>
                 <Splide options={{
-                    perPage: 3,
+                    perPage: 4,
                     gap: 50,
                     arrows: false,
                     breakpoints:
@@ -48,7 +51,7 @@ function Veggie() {
                         },
                     }
                 }}>
-                    {veggie.map((recipe) => {
+                    {deserts.map((recipe) => {
 
                         return (
                             <SplideSlide key={recipe.id} >
@@ -73,9 +76,10 @@ margin: 4rem 0rem;
 @media only screen and (max-width: 768px) {
     margin: 1.5rem 0rem;
 }
+
 .splide__track {
     padding-bottom: 40px;
 }
 `;
 
-export default Veggie;
+export default Deserts;

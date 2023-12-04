@@ -25,6 +25,7 @@ const sliderImg = [
 ]
 
 function HeroSlider() {
+
     return (
         <section className='hero-block'>
             <Splide options={{
@@ -44,9 +45,7 @@ function HeroSlider() {
                             <h1 className='hero-block__title'>{item.text}</h1>
                         </SplideSlide>
                     )
-
                 })}
-
             </Splide >
         </section>
     )

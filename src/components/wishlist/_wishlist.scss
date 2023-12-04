@@ -1,0 +1,25 @@
+.wishlist {
+    text-decoration: none;
+    color: black;
+    font-size: 1.2rem;
+    display: flex;
+    align-items: center;
+    position: relative;
+    gap: 0.1rem;
+
+    @media only screen and (max-width: 768px) {
+        font-size: 0;
+    }
+
+    span {
+        position: absolute;
+        top: 0;
+        left: 0;
+        font-size: 0.8rem;
+        z-index: 2;
+        background: linear-gradient(90deg, rgba(255, 0, 0, 1) 0%, rgba(253, 29, 29, 1) 24%, rgba(122, 17, 78, 1) 100%);
+        border-radius: 50%;
+        color: #fff;
+        padding: 0 4px;
+    }
+}

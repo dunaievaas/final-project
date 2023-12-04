@@ -38,8 +38,8 @@ function SimilarRecepies({ recepieId }) {
                         <ReactPaginate
                             className="pagination"
                             breakLabel="..."
-                            nextLabel="next >"
-                            previousLabel="< previous"
+                            nextLabel=">"
+                            previousLabel="<"
                             onPageChange={handlePageClick}
                             pageCount={pageCount}
                             forcePage={currentPage}

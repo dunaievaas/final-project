@@ -15,7 +15,6 @@ function Recepies() {
             const detailData = await data.json();
 
             setDetails(detailData);
-            console.log(detailData);
         };
 
         fetchDetails();
@@ -34,10 +33,10 @@ function Recepies() {
             <div className='container'>
                 <div ref={ref} className='row'>
                     <h3 className='col-12'>{details.title}</h3>
-                    <div className='col-4'>
+                    <div className='col-4 col-md-12'>
                         <img src={details.image} alt={details.title} />
                     </div>
-                    <Info className='col-8 '>
+                    <Info className='col-8 col-md-12'>
                         <BtnWrapper>
                             <button
                                 className={['btn', activeTab === 'inctructions' ? 'active' : ''].join(' ')}

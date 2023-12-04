@@ -15,13 +15,10 @@ function MealPlan() {
             .then((response) => response.json())
             .then((data) => {
                 setMealData(data);
-                console.log(data);
             })
             .catch(() => {
                 console.log("error");
             })
-
-
     }
 
     return (
@@ -40,9 +37,7 @@ function MealPlan() {
                 </div>
                 {mealData && <MealList mealData={mealData} />}
             </section>
-
         </>
-
     )
 }
 

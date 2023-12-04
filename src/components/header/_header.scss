@@ -1,0 +1,26 @@
+header {
+    padding: 1.5rem 0;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 999;
+    background-color: #fff;
+
+    @include media (sm) {
+        padding: 1rem 0;
+
+        .search-autocomplete {
+            display: none;
+
+            &.active {
+                display: block;
+            }
+        }
+    }
+
+    .nav-icons {
+        display: flex;
+        gap: 0.5rem 1rem;
+    }
+}

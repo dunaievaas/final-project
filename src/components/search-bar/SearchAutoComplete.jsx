@@ -4,13 +4,9 @@ import { Autocomplete, TextField } from "@mui/material";
 
 function SearchAutoComplete({ className = '' }) {
     const navigate = useNavigate();
-    // для роута
     const [value, setValue] = useState(null);
-    //вибраний елемент від оптіонс (один оптіонс)
     const [inputValue, setInputValue] = useState('');
-    // те що вводимо в пошукову строку
     const [options, setOptions] = useState([]);
-    //всі вмпадаючі елементи оптіон - один рядок
 
     useEffect(() => {
         const getSearched = async (name) => {
