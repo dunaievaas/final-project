@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react'
 import Card from '../card/Card';
 import Grid from '../grid/Grid.styled';
+import scrollTop from '../../utilits/scrollTop';
 
 function WishList() {
     const [wishList, setWishList] = useState([]);
@@ -9,6 +10,7 @@ function WishList() {
         const wishList = JSON.parse(localStorage.getItem('wishlist') || '[]');
 
         setWishList(wishList);
+        scrollTop();
     }, [])
 
     return wishList.length ? (
